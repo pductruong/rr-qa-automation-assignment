@@ -1,0 +1,16 @@
+{
+  "name": "rr-qa-automation-assignment",
+  "version": "1.0.0",
+  "description": "Playwright + TypeScript automation test suite for https://tmdb-discover.surge.sh/",
+  "private": true,
+  "scripts": {
+    "test": "npx playwright test",
+    "lint": "npx tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0",
+    "zod": "^3.23.0"
+  }
+}
