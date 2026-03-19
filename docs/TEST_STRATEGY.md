@@ -117,6 +117,10 @@ All response schemas are defined using Zod. TypeScript types are inferred from t
 | BUG-01 | High | Navigation | Direct URL access to `/popular`, `/trend`, `/new`, `/top` returns a blank/broken page. Only the root `/` loads content reliably. Covered by TC-NEG-01, TC-NEG-03. |
 | BUG-02 | Medium | Pagination | Last 2–3 pages render an empty grid or an error state. Only early pages (~1–5) work reliably. Covered by TC-NEG-02. |
 | BUG-03 | Low | Pagination | Page count label may show an incorrect total when multiple filters are combined. Observed during exploratory testing. |
+| BUG-04 | High | API | Search feature uses the movie search API only (`/search/movie`), so searching while Type = TV Show still returns movies instead of TV shows. |
+| BUG-05 | Medium | Genre Filter | Genre filter only sends the most recently selected genre. Selecting a second genre replaces the first — multiple genre filtering is not supported. |
+| BUG-06 | High | TV Show | Card titles are not displayed when Type is set to TV Show. All cards appear with a blank title. |
+| BUG-07 | Medium | Navigation | Clicking the Discover logo refreshes the page but does not reset filter state — the last API request is re-sent instead of returning to the default Popular results. |
 
 ---
 
